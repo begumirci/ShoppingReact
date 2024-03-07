@@ -1,70 +1,66 @@
-.headers{
-    color:rgb(161, 50, 130);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top:1rem;
-    border-bottom:1px solid rgba(0,0,0,0.1);
+.headers {
+  color: #2e1065;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
 }
 
-.basket-count{
-    position: relative;
+.basket-count {
+  position: relative;
 }
 
-.header-container{
-    margin-left:15%;
-    margin-right: 15%;
+.count {
+  position: absolute;
+  bottom: -10px;
+  right: -7px;
+  border-radius: 50%;
+  background-color: #c4b5fd;
+  padding-inline: 7px;
+  font-weight: bold;
 }
 
-.count{
-    position: absolute;
-    bottom:-10px;
-    right: -7px;
-    border-radius: 50%;
-    background-color: pink;
-    padding-inline:7px;
-    font-weight: bold;
+.basket-img {
+  width: 30px;
+  height: 30px;
 }
 
-.basket-img{
-    width:30px;
-    height: 30px;
+.search-input {
+  border-radius: 20px;
+  border-color: #c4b5fd;
+  border-style: solid;
+  padding-inline: 12px;
+  padding-block: 2px;
+  color: #6d28d9;
 }
 
-.hero-container{
-    border-top:1px solid rgba(0,0,0,0.01);
+.search-input:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.3);
+  width: 400px;
 }
 
-.hero-img{
-    width:400px;
-    height: 400px;
+.basket-search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-
-.hero-container{
-    display: flex;
-    background-color:rgb(216, 241, 232);
-    color:rgb(161, 50, 130);
-}
-
-.hero-slogan{
+@media only screen and (max-width: 767px) {
+  .headers {
     display: flex;
     flex-direction: column;
-    font-weight: bold;
-    justify-content: center;
-    gap:5px;
-}
-
-.hero-slogan span{
-    margin-bottom:10px;
-    font-size: 19px;
-}
-
-.hero-slogan a{
-    color: rgb(230, 219, 11);
-    background-color:rgb(161, 50, 130);
-    text-decoration: none;
-    padding-inline:15px;
-    padding-block:5px;
-    border-radius: 25px;
-    max-width:120px;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0.3);
+    width: 200px;
+  }
 }
