@@ -21,12 +21,13 @@ export default function CartItem() {
             </div>
           </div>
           <div className='count-cart'>
-            <span className='increase' onClick={() => addBasket(product)}>
-              +
-            </span>
-            <span className='amount'>{product.amount}</span>
             <span className='decrease' onClick={() => deleteItem(product)}>
               -
+            </span>
+            <span className='amount'>{product.amount}</span>
+
+            <span className='increase' onClick={() => addBasket(product)}>
+              +
             </span>
           </div>
         </li>

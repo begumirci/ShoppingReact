@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import './Cart.css';
 import CartItem from './CartItem';
 import { myData } from '../../App';
 
 export default function Cart() {
-  const { closeModal, deleteCart, cart } = useContext(myData);
+  const { closeModal, deleteCart, cart, takeOrder } = useContext(myData);
+
   const totalPrice = cart.reduce(
     (total, product) => total + product.price * product.amount,
     0
@@ -21,9 +22,13 @@ export default function Cart() {
             </div>
             <CartItem />
             <div className='buttons'>
-              <div>{totalPrice.toLocaleString('en')} ₺</div>
-              <button className='order'>Sipariş Ver</button>
-              <button className='clean-basket' onClick={deleteCart}>
+              <div>
+                <span>Toplam Fiyat:</span> {totalPrice.toLocaleString('en')} ₺
+              </div>
+              <button className='add-basket' onClick={takeOrder}>
+                Sipariş Ver
+              </button>
+              <button className='add-basket' onClick={deleteCart}>
                 Temizle
               </button>
             </div>

@@ -1,5 +1,5 @@
 .headers {
-  color: #2e1065;
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +17,7 @@
   bottom: -10px;
   right: -7px;
   border-radius: 50%;
-  background-color: #c4b5fd;
+  background-color: #bdbdbd;
   padding-inline: 7px;
   font-weight: bold;
 }
@@ -25,20 +25,23 @@
 .basket-img {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 .search-input {
+  width: 250px;
   border-radius: 20px;
-  border-color: #c4b5fd;
+  border-color: #bdbdbd;
   border-style: solid;
   padding-inline: 12px;
   padding-block: 2px;
-  color: #6d28d9;
+  color: #000;
+  transition: width 1s ease;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: #000;
   width: 400px;
 }
 
@@ -46,6 +49,9 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+.unvisible {
+  display: none;
 }
 @media only screen and (max-width: 767px) {
   .headers {
@@ -61,6 +67,6 @@
   .search-input:focus {
     outline: none;
     border-color: rgba(0, 0, 0, 0.3);
-    width: 200px;
+    width: 250px;
   }
 }

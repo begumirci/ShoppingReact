@@ -4,7 +4,7 @@
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 1em;
-  color: #2e1065;
+  color: #000;
   font-weight: bold;
   font-size: 25px;
   padding-left: 10%;
@@ -15,6 +15,11 @@
 .cart-header span {
   font-size: 20px;
   cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    color: #bdbdbd;
+  }
 }
 
 .cart-img img {
@@ -29,11 +34,20 @@
   align-items: center;
   margin-top: 2em;
   gap: 17px;
-  color: #2e1065;
+
   font-weight: bold;
+
+  & div {
+    font-size: 20px;
+    color: #000;
+    & span {
+      font-size: 18px;
+      color: #bdbdbd;
+    }
+  }
 }
 
-.buttons button {
+/* .buttons button {
   border: 1px solid transparent;
   border-radius: 12px;
   padding-inline: 20px;
@@ -49,13 +63,14 @@
 .buttons button:hover {
   box-shadow: none;
   text-shadow: 0 0.1rem #bcb4b4;
-}
+} */
 
 .modal {
-  width: 100%;
+  width: 300px;
+  height: 100vh;
   background-color: white;
   position: fixed;
-  padding-block: 30px;
+  padding-bottom: 30px;
   border-radius: 6px;
   right: 0;
   top: 0;
@@ -90,28 +105,36 @@
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 1em;
-  background-color: #a5b4fc;
+  background-color: #bdbdbd;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .count-cart {
   display: flex;
   align-items: center;
-  font-size: 17px;
-  color: #2e1065;
+  font-size: 20px;
+  color: #000;
+
   font-weight: bold;
 }
 
 .increase {
-  padding-right: 5px;
+  padding-left: 7px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+  &:hover {
+    color: white;
+  }
 }
 
 .decrease {
-  padding-left: 5px;
+  padding-right: 7px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  &:hover {
+    color: white;
+  }
 }
 
 .cart-info {
@@ -119,7 +142,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 1em;
-  color: #2e1065;
+  color: #000;
   font-weight: bold;
 }
 .remove-cart {
@@ -127,7 +150,7 @@
   font-weight: bold;
   cursor: pointer;
   &:hover {
-    color: #2e1065;
+    color: #000;
   }
 }
 
@@ -139,14 +162,40 @@
 
 .empty-cart {
   text-align: center;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  color: #2e1065;
+  color: #000;
   font-weight: bold;
+  margin-top: 25px;
   font-size: 25px;
   padding-left: 10%;
   padding-right: 10%;
+  & span {
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      color: #bdbdbd;
+    }
+  }
+}
+.modal:has(.empty-cart) {
+  height: 150px; /* Sepet boşken modalın yüksekliği */
+}
+@media only screen and (max-width: 767px) {
+  .modal {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    border-radius: 6px;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    position: fixed;
+    animation: slide-down 300ms ease-out forwards;
+    transition: 0.1s ease;
+  }
 }
