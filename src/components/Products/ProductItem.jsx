@@ -20,6 +20,7 @@ export default function ProductItem() {
             <h4>Ürün Adı: {product.title}</h4>
             <h4>Kategori: {product.category}</h4>
             <h4>Fiyat: {product.price.toLocaleString('en')} ₺</h4>
+
             <button className='add-basket' onClick={() => handleClick(product)}>
               Sepete Ekle
             </button>
